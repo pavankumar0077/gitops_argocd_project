@@ -1,0 +1,18 @@
+{
+    "jenkins-runner.jobs": {
+        "gitops-argo_ci": {
+            "isDefault": true,
+            "runWith": "jenkins-master",
+            "name": "gitops-argo_ci",
+        }
+    },
+    "jenkins-runner.hostConfigs": {
+        "jenkins-master": {
+            "url": "http://localhost:8081/",
+            "user": "admin",
+            "password": "admin",
+            "useCrumbIssuer": true,   
+        }
+        
+    }
+}
