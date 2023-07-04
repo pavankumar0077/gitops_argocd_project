@@ -57,5 +57,16 @@ pipeline{
                 }
             }
         }
+        stage('Updating kubernetes deployment'){
+            steps{
+                script{
+                    sh """
+                    cat deployment.yml
+                    sed -i 's/${APP_NAME}.*/s{APP_NAME}:${IMAGE_TAG}/g' deployment.yml
+                    cat deployment.yml
+                    """
+                }
+            }
+        }
     }
 }   
