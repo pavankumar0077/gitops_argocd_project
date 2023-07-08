@@ -72,8 +72,8 @@ pipeline{
             steps{
                 script{
                     sh """
-                    git config --golbal user.name "pavankumar0077"
-                    git config --golbal user.email "dasarepavan007@gmail.com"
+                    git config --global user.name "pavankumar0077"
+                    git config --global user.email "dasarepavan007@gmail.com"
                     git add deployment.yml
                     git commit -m "updated the deployment.yml file"
                     cat deployment.yml
