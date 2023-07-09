@@ -77,6 +77,7 @@ pipeline{
                     git add deployment.yml
                     git commit -m "updated the deployment.yml file"
                     cat deployment.yml
+                    cat deployment.yml
                     """
                     withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
                         sh "git push https://github.com/pavankumar0077/gitops_argocd_project.git main"
